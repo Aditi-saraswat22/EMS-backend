@@ -20,6 +20,14 @@ app.get("/", (req, res) => {
   res.send("Employee Management API Running");
 });
 
+mongoose.connect("mongodb+srv://Aditi:Jeonaditi97%23@cluster0.naaf9go.mongodb.net/")
+.then(() => {
+  console.log("Connected to MongoDB");
+})
+.catch((error) => {
+  console.error("Error connecting to MongoDB:", error);
+});
+
 app.listen(5100, () => {
   console.log("Server Running on Port 5100");
 });
